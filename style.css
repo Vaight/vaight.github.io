@@ -3,73 +3,43 @@
     src: url(fonts/modenine.ttf);
 }
 
-html, body {
-    padding: 0px;
-    margin: auto;
-
-    background-color: #000a14;
-    font-family: modenine;
+:root {
+    --bg1: #010a06;
+    --bg2: #04140d;
+    --fg1: #2d614a;
 }
 
-body {
-    margin-left: 150px;
-    margin-top: 15px;
-    color: #7b9cbd;
+html, body {
+    padding:            0px;
+    margin:             auto;
+    margin-top:         50px;
+    background-color:   var(--bg1);
+    color:              var(--fg1);
+    font-family:        modenine;
+}
+
+main {
+    padding:            10px;
+    padding-top:        50px;
+    max-width:          1000px;
+    width:              90%;
+    margin:             auto;
+    background-color:   var(--bg2);
+    color:              var(--fg1);
+}
+
+h1 {
+    text-align: center;
 }
 
 nav {
-    padding: 5px;
+    width:              100%;
+    height:             auto;
+    padding:            5px;
+    position:           fixed;
+    top:                0px;
+    background-color:   var(--fg1);
+    color:              var(--bg1);
+    vertical-align:     middle;
 
-    font-size: 16pt;
-    width: 100px;
-    height: 100%;
-    text-align: center;
-
-    position: fixed;
-    left: 0px;
-    top: 0px;
-
-    background-color: #7b9cbd;
-    color: #000a14;
-}
-
-span.navbtns {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    padding-top: 5px;
-    padding-bottom: 15px;
-
-    height: fit-content;
-    width: 100%;
-}
-
-button.navbtn {
-    font-family: modenine;
-
-    background-color: #000a14;
-    color: #7b9cbd;
-
-    margin-left: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    border-radius: 5px;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    border: 0px;
-
-    width: 90%;
-    height: auto;
-}
-button.navbtn:hover {
-    background-color: #ffffff;
-    color: #000a14;
-}
-button.navbtn:active {
-    background-color: #7b9cbd;
-    color: #000a14;
 }
