@@ -3,43 +3,47 @@
     src: url(fonts/modenine.ttf);
 }
 
-:root {
+:root { /* variables */
     --bg1: #010a06;
     --bg2: #04140d;
     --fg1: #2d614a;
+    --fg2: #15271f;
 }
 
-html, body {
-    padding:            0px;
-    margin:             auto;
-    margin-top:         50px;
-    background-color:   var(--bg1);
-    color:              var(--fg1);
-    font-family:        modenine;
-}
-
-main {
-    padding:            10px;
-    padding-top:        50px;
-    max-width:          1000px;
-    width:              90%;
-    margin:             auto;
-    background-color:   var(--bg2);
-    color:              var(--fg1);
-}
-
-h1 {
-    text-align: center;
+div.cbox {
+    background-color: var(--bg2);
+    width: 90%;
+    max-width: 900px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
 }
 
 nav {
-    width:              100%;
-    height:             auto;
-    padding:            5px;
-    position:           fixed;
-    top:                0px;
-    background-color:   var(--fg1);
-    color:              var(--bg1);
-    vertical-align:     middle;
+    background-color: var(--fg1);
+    color: var(--bg1);
+    padding: 5px;
+}
 
+hr {
+    color: var(--fg2);
+}
+
+h1 {
+    font-size: 20pt;
+    padding: 0px;
+    margin: auto;
+    text-align: center;
+}
+
+html, body {
+    padding: 0px;
+    margin: auto;
+    background-color: var(--bg1);
+    color: var(--fg1);
+    font-family: modenine;
+}
+
+body {
+    padding: 15px;
 }
