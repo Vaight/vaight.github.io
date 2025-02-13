@@ -1,0 +1,44 @@
+div.listpanel {
+    background-color: var(--fg2);
+    padding: 15px;
+}
+
+div.listitem {
+    background-color: var(--fg2);
+
+    border-color: var(--bg2);
+    border: solid;
+    border-width: 2px;
+
+    margin: 5px;
+
+    min-height: 75px;
+    padding: 5px;
+}
+img.itemicon {
+    width: 75px;
+    height: 75px;
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+span.itemtitle {
+    padding: 0px;
+    margin: auto;
+    color: var(--fg3);
+    font-size: 200%;
+}
+
+span.itemartist {
+    padding: 0px;
+    margin: auto;
+    color: var(--fg1);
+    font-size: 100%;
+}
+
+.itembutton {
+    margin: 5px;
+    position: relative;
+    float: right;
+    top: 0px;
+}

@@ -3,18 +3,63 @@
     <head>
         <title>Music Tool</title>
         <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="musictool.css">
         <meta charset="utf-8"/>
     </head>
-    <nav>
+    <nav id="mnav">
         VAIGHT'S WEBSITE
-        &nbsp;&nbsp;//&nbsp;&nbsp;
+        &nbsp;//&nbsp;
         MUSIC TOOL
     </nav>
     <div class="cbox">
-        <h1>Cookie Test</h1><hr>
-        ctest = <input type="text" id="ctest">
-        <input type="button" value="SAVE" onclick="saveCookie()">
-        <input type="button" value="LOAD" onclick="loadCookie()">
+        <h1>This is a Work in Progress</h1><hr>
+        Do not expect complete or stable features. Use at your own risk. You may experience loss of progress or other
+        unexpected behavior. To add items to your list, press the '+' located on the bottom left. To modify or remove
+        a list item, use the buttons found on the list item itself. Be sure to save frequently using the 'SAVE' button.
+        When you are done, press the 'EXPORT DATA AS FILE' button to generate and download a file that you can share to others.
+        <br><br>
+        If you want to browse published collections, click <a href="">here</a>.
+        <br><br>
+        <span style="color: red;">
+            PROTOTYPE CHANGELOG (+ = add, X = to-do, - = removed):
+            <br>+ site layout
+            <br>+ list & list item structure
+            <br>+ id system abd button layout
+            <br>+ nav bar mobile support
+            <br>+ cookie system
+            <br>X add/remove list items
+            <br>X list item edits
+            <br>X list item removal
+            <br>X data exporting
+            <br>- old layout
+        </span>
+        <br><br>
+
+        <div class="listpanel">
+            <h1>Your Collection</h1><hr>
+
+            <div id="l-items">
+                <div class="listitem">
+
+                    <input type="button" value="DELETE" class="itembutton" id="i-del">
+                    <input type="button" value="EDIT" class="itembutton" id="i-edit">
+    
+                    <img class="itemicon" src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png">
+    
+                    <span class="itemtitle" id="i-title">ALBUM TITLE</span><br>
+                    <span class="itemartist" id="i-artist">ALBUM ARTIST</span>
+    
+                </div>
+            </div>
+
+            <hr>
+            <input type="button" value="+" class="colbutton" id="i-add">
+            <input type="button" value="SAVE" class="colbutton" id="i-add">
+            <input type="button" value="EXPORT DATA AS FILE" class="colbutton" id="i-add">
+            <input type="button" value="PUBLISH TO SITE" class="colbutton" id="i-add">
+            <input type="button" value="DELETE ALL" class="colbutton" id="i-add" style="float: right;">
+        </div>
     </div>
     <script src="main.js"></script>
+    <script src="list.js"></script>
 </html>

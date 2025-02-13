@@ -8,6 +8,7 @@
     --bg2: #04140d;
     --fg1: #2d614a;
     --fg2: #15271f;
+    --fg3: #319769;
 }
 
 div.cbox {
@@ -19,10 +20,21 @@ div.cbox {
     margin-top: 15px;
 }
 
-nav {
+nav.desktop {
     background-color: var(--fg1);
+    text-align: left;
+
     color: var(--bg1);
     padding: 5px;
+}
+
+nav.mobile {
+    background-color: var(--fg1);
+    font-size: 25pt;
+    text-align: left;
+
+    color: var(--bg1);
+    padding: 10px;
 }
 
 hr {
