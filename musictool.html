@@ -3,6 +3,7 @@
     <head>
         <title>Vaight's Webpage</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="musictool.css">
         <meta charset="utf-8"/>
     </head>
     <body>
@@ -15,8 +16,37 @@
         </nav>
         <div class="bbox">
             <div class="cbox"> <!-- main content pane -->
-                <h1>ERROR: NO CONTENT ON PAGE</h1>
+                <h1>MUSIC CATALOG TOOL</h1><hr>
+                This tool is similar to discogs or other music collecting tools. The idea here is to catalog what music you
+                have PHYSICALLY collected so that you can share this with other people or just keep track of what you own.
+                <br><br>
+                Below you will see a list with two tabs. You can edit the "collection" tab to be what you currently own. Now
+                there is also the "wishlist" tab. This is for if you are going to share this list with people who may be buying
+                you gifts.
+                <hr><br>
+
+                <div class="lbox" id="litems">
+                    [MY COLLECTION]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [WISHLIST]<br><br>
+                    <div class="litem", id="litembuilder", style="display: none;">
+                        <img class="licon" src="https://png.pngtree.com/png-vector/20221125/ourmid/pngtree-no-image-available-icon-flatvector-illustration-blank-avatar-modern-vector-png-image_40962406.jpg">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="ltitle">%TITLE%</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="lartist">%ARTIST%</span><br>
+                        <input type="button", value="EDIT", class="lbtnitem"><input type="button", value="DELETE", class="lbtnitem">
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="ltracks">%TNUM%</span> TRACKS OWNED VIA <span class="ltype">%TYPE%</span><br>
+                    </div>
+                </div>
+                <div class="lbox">
+                    <input type="button", class="lbtn", value="CREATE NEW ITEM">
+                    <input type="button", class="lbtn", value="DOWNLOAD LIST">
+                    <input type="button", class="lbtn", value="UPLOAD LIST">
+                    <input type="button", class="lbtn", value="REQUEST PERMALINK", style="background-color: red; border-color: red;">
+                </div>
+                <br>
+                <div class="lbox" id="tempjsondisplay">
+                </div>
             </div>
         </div>
     </body>
+    <script src="src/list.js"></script>
 </html>
