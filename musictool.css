@@ -61,32 +61,35 @@ div.fullfocus {
     height: 100%;
 }
 
-div.prototypepopup {
+div.popupsmall {
     position: relative;
-    top: calc(50% - 100px);
+    top: calc(50% - 200px/2);
     width: 90%;
     max-width: 500px;
     height: 200px;
     margin: auto;
-    background-color: var(--bg2);
+    background-color: var(--bg3);
     border: solid;
     border-width: 2px;
-    border-color: var(--fg3);
+    border-color: var(--bg4);
+    color: var(--bg5);
     padding: 5px;
 }
-div.mediumpopup {
+div.popupmedium {
     position: relative;
     top: calc(50% - 500px/2);
     width: 90%;
     max-width: 500px;
     height: 500px;
     margin: auto;
-    background-color: var(--bg2);
+    background-color: var(--bg3);
     border: solid;
     border-width: 2px;
-    border-color: var(--fg3);
+    border-color: var(--bg4);
+    color: var(--bg5);
     padding: 5px;
 }
+
 input[type=button].lbtn, input[type=button].lbtnitem {
     background-color: var(--bg5);
     color: var(--bg1);
@@ -108,12 +111,26 @@ input[type=button].lbtn:active, input[type=button].lbtnitem:active {
 }
 
 input[type=text] {
+    font-family: jupiteroid;
     background-color: var(--bg1);
     color: var(--fg3);
     border: solid;
     border-color: var(--bg1);
     margin: auto;
     width: 98%;
+    font-size: 16pt;
+    text-transform: uppercase;
+}
+
+select {
+    font-family: jupiteroid;
+    background-color: var(--bg1);
+    color: var(--fg3);
+    border: solid;
+    border-color: var(--bg1);
+    margin: auto;
+    width: 100%;
+    font-size: 16pt;
 }
 
 input.lbtnitem {

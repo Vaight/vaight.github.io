@@ -77,6 +77,22 @@ const removeFromList = (id) => {
     updateTempDisplay();
 }
 
+const modifyListItem = (title, artist, img, tracknum, type, id) => {
+    const lobj = itemlist.getItemById(id);
+    const ltag = document.getElementById(id);
+    ltag.id = ("li-" + title + artist).toLowerCase().replace(/\s/g, "");
+    if (itemlist.getItemById(ltag.id)) return; // there is already an item with the new id
+    lobj.title = title; lobj.artist = artist; lobj.imgsrc = img; lobj.tracknum = tracknum; lobj.type = type;
+    lobj.id = ltag.id;
+    for (const tag of ltag.children) {
+        if (tag.className === "ltitle") tag.innerText = title.toUpperCase();
+        if (tag.className === "lartist") tag.innerText = artist.toUpperCase();
+        if (tag.className === "ltracks") tag.innerText = tracknum.toString();
+        if (tag.className === "ltype") tag.innerText = type.toUpperCase();
+        if (tag.className === "licon") tag.src = img;
+    }
+}
+
 const updateTempDisplay = () => {
     let str = "INTERNAL DATA STRUCTURE: \n\n";
     for (const i of itemlist.items) {
@@ -92,7 +108,31 @@ function itemButtonInput(index, itemid) { // index: 0=delete, 1=edit
     }
 }
 
-//addItemToList("I Robot","Alan Parsons Project","https://upload.wikimedia.org/wikipedia/en/0/0f/The_Alan_Parsons_Project_-_I_Robot.jpg");
+function unfocus() {
+    const t = document.getElementById("fullfocus");
+    t.style.display = "block";
+}
+function refocus() {
+    const t = document.getElementById("fullfocus");
+    t.style.display = "none";
+}
+function showPopUp(id) {
+    unfocus();
+    const t = document.getElementById(id)
+    t.style.display = "block";
+    for (const tag of t.children) {
+        if (tag.type === "text") tag.value = "";
+    }
+}
+function hidePopUps() {
+    refocus();
+    let tags = document.getElementById("fullfocus").children;
+    for (let i = 0; i < tags.length; i++) {
+        tags[i].style.display = "none";
+    }
+}
+
+hidePopUps();
 
 addToList(
     "i robot",
@@ -114,4 +154,18 @@ addToList(
     "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Project_Pat_Mista_Dont_Play.jpg/220px-Project_Pat_Mista_Dont_Play.jpg",
     20,
     "compact disk"
+);
+addToList(
+    "Ambrosia",
+    "Ambrosia",
+    "https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Ambrosia%28album%29.jpeg/220px-Ambrosia%28album%29.jpeg",
+    8,
+    "8-track tape"
+);
+addToList(
+    "Animals",
+    "Pink Floyd",
+    "https://i.discogs.com/_hYJ-UiHBq0KtuIlz26o-4Ar82o9589HIFIE5XOXuVU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM5MTMy/Mi0xNjkxNTYzMjc4/LTYwODAuanBlZw.jpeg",
+    5,
+    "vinyl"
 );

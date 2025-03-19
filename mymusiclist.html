@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vaight's Webpage: My Lists</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="musictool.css">
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <nav>
+            <div class="navtabreigon">
+                <input type="button" class="navtabsel", value="MY MUSIC LIST">
+                <a href="musictool.html"><input type="button" class="navtab", value="MUSIC TOOL"></a>
+                <a href="index.html"><input type="button" class="navtab", value="HOME"></a>
+            </div>
+            VAIGHT'S WEBSITE
+        </nav>
+        <div class="bbox">
+            <div class="cbox"> <!-- main content pane -->
+                <h1>MY COLLECTION AND WISHLIST</h1>
+                <div class="lbox">
+                    <input type="button", class="lbtn", value="OWNED", onclick="displayList(0)">&nbsp;/&nbsp;
+                    <input type="button", class="lbtn", value="WISHLIST", onclick="displayList(1)">
+                    <h1 id="lcurtitle">PLEASE SELECT A LIST ABOVE</h1>
+                </div>
+                <div class="lbox" id="litems">
+                    <div class="litem", id="litembuilder", style="display: none;">
+                        <img class="licon" src="https://png.pngtree.com/png-vector/20221125/ourmid/pngtree-no-image-available-icon-flatvector-illustration-blank-avatar-modern-vector-png-image_40962406.jpg">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="ltitle">%TITLE%</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="lartist">%ARTIST%</span><br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="ltracks">%TNUM%</span> TRACKS ON <span class="ltype">%TYPE%</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br>
+    </body>
+    <script src="src/mylist.js"></script>
+</html>
