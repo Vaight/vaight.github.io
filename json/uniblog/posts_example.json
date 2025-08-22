@@ -1,0 +1,19 @@
+{
+    "section": "EXAMPLE PROJECT NAME",
+    "posts": [
+        {
+            "date": "8/21/2025",
+            "author": "Vaight",
+            "imgsrc": "images/content/example.gif",
+            "title": "Example Post",
+            "desc": "This is the description of the example post, loaded from the json. Image loaded from local:"
+        },
+        {
+            "date": "8/22/2025",
+            "author": "Vaight",
+            "imgsrc": "images/content/cat.jpg",
+            "title": "Cat",
+            "desc": ""
+        }
+    ]
+}

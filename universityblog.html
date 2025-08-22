@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vaight's Webpage</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8"/>
+        <script src="src/uniblog.js"></script>
+    </head>
+    <body>
+        <audio id="sfx"></audio>
+        <nav>
+            &nbsp;VAIGHT'S <i>UNIVERSITY BLOG</i><span style="font-size: 12pt;color:rgb(41, 118, 148);">&nbsp;&nbsp;&nbsp;* FOR GRADING PURPOSES</span>
+            <a href="dead.html"><input class="navbtn" type="button", value="ABOUT ME"></a>
+            <a href="dead.html"><input class="navbtn" type="button", value="PROJECTS"></a>
+            <a href="dead.html"><input class="navbtn" type="button", value="BLOG"></a>
+            <a href="index.html"><input class="navbtn" type="button", value="RETURN HOME" style="background-color:black;border-color: white;"></a>
+        </nav>
+        <div class="dispbox">
+            <div id="selcontrols">
+                Please select a section to view:<hr>
+                <input class="secbtn" type="button", value="Example Posts, Not relevant (8/21/2025)"       onclick="sectionButtonClick(0)">
+                <div style="width: 100%;text-align: center;">╔════════ ATLS 3300 OBJ ════════╗</div>
+                <input class="secbtn" type="button", value="ATLS OBJ -- IDC 1 Ideation (EMPTY)"            onclick="sectionButtonClick(1)">
+                <input class="secbtn" type="button", value="ATLS OBJ -- IDC 1 Project (EMPTY)"             onclick="sectionButtonClick(2)">
+                <input class="secbtn" type="button", value="ATLS OBJ -- Enclosures Mini Project (EMPTY)"   onclick="sectionButtonClick(3)">
+                <input class="secbtn" type="button", value="ATLS OBJ -- Motor Buffet Mini Project (EMPTY)" onclick="sectionButtonClick(4)">
+                <input class="secbtn" type="button", value="ATLS OBJ -- IDC2 Ideation (EMPTY)"             onclick="sectionButtonClick(5)">
+                <input class="secbtn" type="button", value="ATLS OBJ -- IDC2 Project (EMPTY)"              onclick="sectionButtonClick(6)">
+            </div>
+            <div id="posts", style="display: none;">
+                <div id="postops">
+                    <span id="sectitle", style="font-size:24pt;color:white;"></span><hr>
+                    <input class="secbtn" type="button", value="Return to section selection" onclick="sectionButtonClick(-1)">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
