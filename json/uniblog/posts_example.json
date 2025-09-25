@@ -6,14 +6,18 @@
             "author": "Vaight",
             "imgsrc": "images/content/example.gif",
             "title": "Example Post",
-            "desc": "This is the description of the example post, loaded from the json. Image loaded from local:"
+            "desc": "This is the description of the example post, loaded from the json. Image loaded from local:",
+            "link": "",
+            "linktxt": ""
         },
         {
             "date": "8/22/2025",
             "author": "Vaight",
             "imgsrc": "images/content/cat.jpg",
             "title": "Cat",
-            "desc": ""
+            "desc": "",
+            "link": "",
+            "linktxt": ""
         }
     ]
 }

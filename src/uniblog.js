@@ -13,6 +13,9 @@ function sectionButtonClick(index) {
     } else if (index == 0) {
         displayPostJson("json/uniblog/posts_example.json");
         playSfx("audio/open.mp3");
+    }  else if (index == 1) {
+        displayPostJson("json/uniblog/atls_obj_idc_1_ideation.json");
+        playSfx("audio/open.mp3");
     } else {
         playSfx("audio/deny.mp3");
     }
@@ -45,8 +48,8 @@ function displayPostJson(path) {
                 maaBr(obj1);
                 if (i.desc != "") maaSpan(obj1, "pdesc", i.desc);
                 maaBr(obj1);
-                maaImg(obj1, i.imgsrc)
-
+                if (i.imgsrc != "") maaImg(obj1, i.imgsrc);
+                if (i.link != "" && i.linktxt != "") maaLink(obj1, i.link, i.linktxt);
                 document.getElementById("posts").appendChild(obj1);
             }
         })
@@ -70,6 +73,15 @@ function maaBr(elem) { // make and append line break
 function maaImg(elem, src) { // make and append image
     s = document.createElement("img");
     s.src = src
+    s.style.width = "100%";
+    elem.appendChild(s);
+    return;
+}
+function maaLink(elem, href, text) { // make and append image
+    s = document.createElement("a");
+    s.href = href
+    s.innerText = text;
+    s.target = "_blank"
     elem.appendChild(s);
     return;
 }
