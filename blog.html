@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Vaight</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div id="header-viewport"></div>
+        <div id="header-content">
+            <span>vaight</span>
+            <button id="homepage" onclick="document.location='index.html'"></button>
+        </div>
+    </div>
+
+    <div class="nav">
+        <a class="navlink" href="index.html"><img class="navicon" src="images/icons/house.svg"></a>
+        <a class="navlink" href="blog.html">blog</a>
+        <a class="navlink" href="dead.html">university</a>
+        <a class="navlink" href="dead.html">music</a>
+        <a class="navlink" href="dead.html">browse projects</a>
+        <a class="navlink" href="dead.html">about me</a>
+    </div>
+    <div class="scroll">
+        <div class="content">
+            <h2>My Blog</h2><hr><br>
+            <div class="blog-container", id="blog-container">
+                <div class="blog-post" id="blog-post-const" style="display: none;">
+                    <span class="blog-author" id="author">Placeholder Author</span>
+                    <span class="blog-date" id="date">Placeholdeer Date</span>
+                    <span class="blog-section" id="section">Placeholder Section</span><br>
+                    <span class="blog-title" id="title">Placeholder Title</span>
+                    <span class="blog-content" id="content">Placeholder Content</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="src/header.js"></script>
+<script src="src/blog.js"></script>
+
+</html>
